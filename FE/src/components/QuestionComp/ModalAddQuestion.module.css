@@ -1,0 +1,16 @@
+.modalContent {
+    width: 800px;
+}
+
+.modalBody {
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+textarea.textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.font14 {
+    font-size: 14px;
+}

@@ -1,0 +1,57 @@
+.font12 {
+  font-size: 12px;
+}
+
+.tags {
+  border-radius: 5px;
+  background-color: rgba(147, 190, 212, 0.312);
+  cursor: pointer;
+}
+
+.tags:hover {
+  background-color: rgba(82, 155, 192, 0.312);
+}
+
+.ask {
+  min-width: 130px;
+  height: 40px;
+}
+
+.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.textContent {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.cursorPointer {
+  cursor: pointer;
+  transition: all .8s cubic-bezier(0.175, 0.885, 0, 1);
+}
+
+.cursorPointer:hover {
+  
+  transform: scale(1.13);
+}
+
+
+.zIndex0 {
+  z-index: 0;
+}
+
+.row1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}

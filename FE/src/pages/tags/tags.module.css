@@ -1,0 +1,18 @@
+.content {
+  margin-top: 50px;
+  margin-left: 164px;
+}
+
+.searchInput {
+  padding-left: 30px !important;
+}
+
+.searchIcon {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+}
+
+.w24 {
+    width: 24%;
+}

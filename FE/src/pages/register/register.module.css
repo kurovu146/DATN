@@ -1,0 +1,18 @@
+.note {
+    font-size: 12px;
+}
+
+.passwordIcon {
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 8px;
+}
+
+input.reset {
+    background-image: none !important;
+}
+
+.font14 {
+    font-size: 14px;
+}

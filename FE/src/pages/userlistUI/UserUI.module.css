@@ -1,0 +1,63 @@
+.icon {
+  padding: 10px;
+  color: green;
+  min-width: 50px;
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.itemTimeContainer {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}
+.itemTime {
+  text-decoration: none;
+  color: black;
+}
+.cardBox {
+  width: 10%;
+  height: 20%;
+  background-color: #ffffff;
+  min-width: 200px;
+  border: none;
+}
+input[type="radio"]:checked + label {
+  font-weight: bold;
+}
+
+.activeBtn {
+  background-color: #eeeded;
+}
+.activeBtn:hover {
+  background-color: #f7f4f1;
+}
+.activeBtnUserTime {
+  font-weight: bold;
+  color: rgb(10, 8, 8);
+  font-size: 16px;
+}
+.searchInput {
+  padding-left: 30px !important;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 3px;
+  left: 8px;
+}
+.techType {
+  font-size: 12px;
+}
+.containUser {
+  width: 203px;
+}
+.imgSize {
+  width: 45px;
+}
+.containerButtonUserType:hover {
+  background-color: #f9f9f9;
+}

@@ -1,0 +1,10 @@
+.navbar {
+    width: 164px;
+    margin-top: 50px;
+}
+
+.active {
+    font-weight: bold;
+    background-color: #f1f2f3;
+    border-right: 1px solid red;
+}

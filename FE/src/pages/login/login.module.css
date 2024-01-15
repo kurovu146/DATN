@@ -1,0 +1,15 @@
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+.passwordIcon {
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 8px;
+}
+
+input.reset {
+    background-image: none !important;
+}

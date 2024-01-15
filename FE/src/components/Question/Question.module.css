@@ -1,0 +1,61 @@
+.cardSub {
+  font-size: 12px;
+}
+.card_box {
+  width: 42%;
+  height: 20%;
+  background-color: #d9eaf7;
+}
+.containerCode {
+  height: max-content;
+  background-color: #f6f6f6;
+  margin-top: 30px;
+  border: 1px solid rgb(151, 151, 151);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.linkImprove {
+  color: #6a737c;
+  text-decoration: none;
+  cursor: pointer;
+}
+.vote {
+  color: #6a737c;
+  text-decoration: none;
+  cursor: pointer;
+}
+.iconText {
+  text-align: center;
+}
+textarea {
+  height: 200px;
+  background-color: rgb(193, 148, 148);
+}
+
+.listVote li {
+  float: left;
+  padding-right: 20px;
+  color: orange;
+}
+
+.listVote li span {
+  color: black;
+}
+.textComment {
+  font-size: 15px;
+}
+
+.activeBtnVote {
+  color: rgb(239, 83, 5);
+}
+.commentRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.linkImprove:hover{
+  color: rgb(45, 184, 184);
+}
+
+
