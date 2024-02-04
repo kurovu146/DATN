@@ -18,12 +18,16 @@ import { JwtAuthGuard } from 'src/shared/passport/jwt-auth.guard';
 import { TagService } from '../tag/tag.service';
 import { QuestionTag } from 'src/model/questionTag.entity';
 import { Question } from 'src/model/question.entity';
+import { ChatGPTServices } from '../chatGPT/chatGPT.service';
+import { CommentService } from '../comment/comment.service';
 
 @Controller('question')
 export class QuestionController {
   constructor(
     private readonly questionService: QuestionService,
     private readonly tagService: TagService,
+    public readonly chatGPTService: ChatGPTServices,
+    public readonly commentService: CommentService
   ) {}
 
   @UseGuards(JwtAuthGuard)
@@ -44,6 +48,14 @@ export class QuestionController {
         questionId: question.id,
       });
     }
+
+    const AIComment = await this.chatGPTService.ChatGPT(createQuestionDto.textContent);
+    const ChatGPT = {id: 9999}
+    await this.commentService.create(ChatGPT, {
+      content: AIComment,
+      commentId: 0,
+      questionId: question.id
+    })
 
     return {
       message: 'Create question successful',

@@ -84,7 +84,7 @@ export interface ICommentDetail {
   commentId: number;
   userId: number;
   questionId: number;
-  user: IUserInfor;
+  user?: IUserInfor;
   createdAt: string;
   updatedAt: string;
   author: string;

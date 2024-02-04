@@ -67,6 +67,17 @@ function Maincontent(props: IPropsMainContent) {
         .then((res) =>  {
             setIsComment(!isComment);
             toast.success(MESSAGE.ADD_SUCESS, { autoClose: 3000 });
+            const cmt: ICommentDetail = {
+              id: Date.now(),
+              content: params.content,
+              commentId: 0,
+              userId: 0,
+              questionId: 0,
+              createdAt: new Date().toDateString(),
+              updatedAt: new Date().toDateString(),
+              author: ""
+            }
+            setCommentDataDetail([...commentDataDetail, cmt])
         });
     }
   };
@@ -87,6 +98,7 @@ function Maincontent(props: IPropsMainContent) {
         .then((res) => {
             setIsComment(!isComment);
             toast.success(MESSAGE.ADD_SUCESS, { autoClose: 3000 });
+
         });
     }
   };
@@ -221,7 +233,7 @@ function Maincontent(props: IPropsMainContent) {
       <div dangerouslySetInnerHTML={{__html: postDetail?.textContent}}></div >
       <br />
       <div className={`overflow-auto ${style.containerCode}`}>
-        <p>{postDetail?.codeContent}</p>
+        <div>{postDetail?.codeContent}</div>
       </div>
       <div className="d-flex justify-content-between mt-4">
         <div className="p-2 w-32 ">
@@ -278,7 +290,7 @@ function Maincontent(props: IPropsMainContent) {
             <hr />
             <div className={`${style.commentRow}`}>
               <div>
-                {item.content} -{" "}
+                <div dangerouslySetInnerHTML={{__html: item.content}}></div>{item.content} -{" "}
                 <a href="" className={`${style.textComment}`}>
                   {item?.author}
                 </a>{" "}
@@ -347,7 +359,6 @@ function Maincontent(props: IPropsMainContent) {
                 </div>
               </div>
             </div>
-            <div className="ms-4">Test</div>
             {renderCommentChild(item?.id)}
           </div>
         ))}

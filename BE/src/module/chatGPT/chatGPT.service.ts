@@ -11,14 +11,12 @@ export class ChatGPTServices {
     })
   }
 
-  async testChatGPT() {
-    const completion = await this.openai.completions.create({
-      model: "gpt-3.5-turbo-instruct",
-      prompt: "Say this is a test.",
-      max_tokens: 7,
-      temperature: 0,
+  async ChatGPT(content: string) {
+    const completion = await this.openai.chat.completions.create({
+      model: "gpt-3.5-turbo",
+      messages: [{ role: "system", content}],
     });
   
-    console.log(completion);
+    return completion.choices[0].message.content;
   }
 }

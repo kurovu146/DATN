@@ -5,10 +5,10 @@ import { ChatGPTServices } from "./chatGPT.service";
 export class ChatGPTController {
   constructor( public chatGPTService: ChatGPTServices) {}
 
-  @Get()
-  async testChatGPT() {
-    console.log('Here');
+  // @Get()
+  // async testChatGPT() {
+  //   console.log('Here');
     
-    await this.chatGPTService.testChatGPT();
-  }
+  //   await this.chatGPTService.testChatGPT();
+  // }
 }
